@@ -3,12 +3,16 @@
 
 include_once __DIR__ . '/prodotto.php';
 
+include_once __DIR__ . '/eta.php';
+
 class Cd extends Prodotto{
 
   public $durata;
   public $anno;
+  use Eta;
   
   public function __construct(
+
     String $nome,
     String $autore,
     Float $prezzo,
@@ -16,7 +20,7 @@ class Cd extends Prodotto{
     Bool $pubblicato,
     String $immagine,
 
-    Int $durata,
+    Float $durata,
     String $anno 
    
     ) {

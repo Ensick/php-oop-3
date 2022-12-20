@@ -1,10 +1,12 @@
 <?php
 
 include_once __DIR__ . '/prodotto.php';
+include_once __DIR__ . '/eta.php';
 
 class Dvd extends Prodotto{
   public $durata;
   public $anno;
+  use Eta;
   
 
   public function __construct(
